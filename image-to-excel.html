@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert images to Excel files online with adjustable compression. Free, fast, and secure image to spreadsheet conversion tool.">
+    <meta name="keywords" content="image to excel, convert image to spreadsheet, picture to excel, image to xlsx, photo to excel converter">
+    <meta name="author" content="ImageExcelTools">
+    <meta name="robots" content="index, follow">
+    <title>Image to Excel Converter | Free Online Tool with Compression</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4bb543;
+            --warning-color: #f0ad4e;
+            --danger-color: #d9534f;
+            --border-radius: 8px;
+            --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7ff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .tool-container {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+
+        .upload-area i {
+            font-size: 48px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .upload-area h3 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .upload-area p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .options-container {
+            margin-bottom: 30px;
+        }
+
+        .options-container h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .option-group {
+            margin-bottom: 20px;
+        }
+
+        .option-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .slider {
+            flex-grow: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: #ddd;
+            outline: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .slider-value {
+            min-width: 40px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .radio-option input {
+            cursor: pointer;
+        }
+
+        .preview-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .preview-header h3 {
+            font-weight: 600;
+        }
+
+        .preview-content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-preview {
+            max-width: 200px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .file-info {
+            flex-grow: 1;
+            min-width: 250px;
+        }
+
+        .file-info p {
+            margin-bottom: 10px;
+        }
+
+        .file-info strong {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .ad-container {
+            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .ad-label {
+            font-size: 12px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        .how-to-use {
+            padding: 60px 0;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .step-content p {
+            color: #666;
+        }
+
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbb;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                z-index: 99;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .upload-area {
+                padding: 30px 20px;
+            }
+
+            .preview-content {
+                flex-direction: column;
+            }
+
+            .image-preview {
+                max-width: 100%;
+            }
+        }
+
+        /* Loading spinner */
+        .spinner {
+            display: none;
+            width: 40px;
+            height: 40px;
+            margin: 20px auto;
+            border: 4px solid rgba(67, 97, 238, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Progress bar */
+        .progress-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+            display: none;
+        }
+
+        .progress-bar {
+            height: 10px;
+            border-radius: var(--border-radius);
+            background-color: var(--primary-color);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--success-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            z-index: 1000;
+            display: none;
+            animation: slideIn 0.5s, fadeOut 0.5s 2.5s;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-file-excel"></i>
+                    Image2Excel
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-to-use">How to Use</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Convert Images to Excel in Seconds</h1>
+                <p>Upload your image files and convert them to Excel spreadsheets with adjustable compression. Fast, secure, and completely free!</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Ad Container Top -->
+            <div class="ad-container">
+                <span class="ad-label">Advertisement</span>
+                <!-- Replace with your AdSense code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <div class="tool-container">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h3>Drag & Drop Your Images Here</h3>
+                    <p>or click to browse files</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;" multiple>
+                    <button class="btn" id="selectFilesBtn">Select Files</button>
+                </div>
+
+                <div class="options-container">
+                    <h3>Conversion Options</h3>
+                    <div class="option-group">
+                        <label for="compressionLevel">Compression Level</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="50" class="slider" id="compressionLevel">
+                            <span class="slider-value" id="compressionValue">50%</span>
+                        </div>
+                    </div>
+                    <div class="option-group">
+                        <label>Output Format</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="format" value="xlsx" checked>
+                                Excel (.xlsx)
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="format" value="csv">
+                                CSV (.csv)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="option-group">
+                        <label>OCR Options</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="ocr" value="auto" checked>
+                                Automatic Detection
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="ocr" value="manual">
+                                Manual Selection
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+
+                <div class="spinner" id="spinner"></div>
+
+                <div class="preview-container" id="previewContainer">
+                    <div class="preview-header">
+                        <h3>Selected Files</h3>
+                        <button class="btn btn-outline" id="clearFilesBtn">Clear All</button>
+                    </div>
+                    <div class="preview-content" id="previewContent">
+                        <!-- Preview content will be added here dynamically -->
+                    </div>
+                </div>
+
+                <button class="btn" id="convertBtn" style="display: none; margin-top: 20px;">Convert to Excel</button>
+            </div>
+
+            <!-- Ad Container Middle -->
+            <div class="ad-container">
+                <span class="ad-label">Advertisement</span>
+                <!-- Replace with your AdSense code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <section class="features" id="features">
+                <div class="section-title">
+                    <h2>Why Choose Our Image to Excel Converter</h2>
+                    <p>Our tool offers the best balance between quality and performance for all your image conversion needs</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Lightning Fast</h3>
+                        <p>Convert images to Excel in seconds with our optimized processing algorithm that handles multiple files simultaneously.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3>Adjustable Compression</h3>
+                        <p>Customize the compression level to balance between file size and image quality according to your needs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Secure Processing</h3>
+                        <p>Your files are processed securely in your browser and never uploaded to our servers, ensuring complete privacy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3>Multiple Formats</h3>
+                        <p>Export to various Excel formats including XLSX and CSV to ensure compatibility with all your applications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Friendly</h3>
+                        <p>Works perfectly on all devices including smartphones and tablets with our responsive interface.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Completely Free</h3>
+                        <p>No hidden charges or subscriptions - enjoy all features without any cost or limitations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ad Container Bottom -->
+            <div class="ad-container">
+                <span class="ad-label">Advertisement</span>
+                <!-- Replace with your AdSense code -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            <section class="how-to-use" id="how-to-use">
+                <div class="section-title">
+                    <h2>How to Convert Images to Excel</h2>
+                    <p>Follow these simple steps to transform your images into editable Excel spreadsheets</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Upload Your Images</h3>
+                            <p>Drag and drop your image files into the upload area or click to browse your files. We support JPG, PNG, BMP, and other common formats.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Adjust Conversion Settings</h3>
+                            <p>Set your preferred compression level and choose between Excel (.xlsx) or CSV (.csv) output format based on your needs.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Convert & Download</h3>
+                            <p>Click the convert button and wait for the processing to complete. Your Excel file will download automatically when ready.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Image2Excel</h3>
+                    <p>The fastest and most secure way to convert your images to Excel spreadsheets with adjustable compression options.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-to-use">How to Use</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Image to Excel</a></li>
+                        <li><a href="#">PDF to Excel</a></li>
+                        <li><a href="#">CSV to Excel</a></li>
+                        <li><a href="#">Excel Compressor</a></li>
+                        <li><a href="#">All Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Image2Excel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // Update current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Compression level slider
+        const compressionSlider = document.getElementById('compressionLevel');
+        const compressionValue = document.getElementById('compressionValue');
+        
+        compressionSlider.addEventListener('input', function() {
+            compressionValue.textContent = this.value + '%';
+        });
+
+        // File upload functionality
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const selectFilesBtn = document.getElementById('selectFilesBtn');
+        const previewContainer = document.getElementById('previewContainer');
+        const previewContent = document.getElementById('previewContent');
+        const clearFilesBtn = document.getElementById('clearFilesBtn');
+        const convertBtn = document.getElementById('convertBtn');
+        const spinner = document.getElementById('spinner');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const toast = document.getElementById('toast');
+
+        let selectedFiles = [];
+
+        // Handle drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--primary-color)';
+            uploadArea.style.backgroundColor = 'rgba(67, 97, 238, 0.05)';
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '#ccc';
+            uploadArea.style.backgroundColor = 'transparent';
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#ccc';
+            uploadArea.style.backgroundColor = 'transparent';
+            
+            if (e.dataTransfer.files.length > 0) {
+                handleFiles(e.dataTransfer.files);
+            }
+        });
+
+        // Handle file selection via button
+        selectFilesBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length > 0) {
+                handleFiles(fileInput.files);
+            }
+        });
+
+        // Clear all files
+        clearFilesBtn.addEventListener('click', () => {
+            selectedFiles = [];
+            previewContainer.style.display = 'none';
+            convertBtn.style.display = 'none';
+            fileInput.value = '';
+        });
+
+        // Convert button click
+        convertBtn.addEventListener('click', convertFiles);
+
+        // Handle selected files
+        function handleFiles(files) {
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (file.type.startsWith('image/')) {
+                    selectedFiles.push(file);
+                }
+            }
+            
+            if (selectedFiles.length > 0) {
+                updatePreview();
+                previewContainer.style.display = 'block';
+                convertBtn.style.display = 'block';
+                showToast('Files added successfully!');
+            } else {
+                showToast('Please select valid image files.');
+            }
+        }
+
+        // Update file preview
+        function updatePreview() {
+            previewContent.innerHTML = '';
+            
+            selectedFiles.forEach((file, index) => {
+                const fileContainer = document.createElement('div');
+                fileContainer.style.display = 'flex';
+                fileContainer.style.gap = '20px';
+                fileContainer.style.marginBottom = '20px';
+                fileContainer.style.width = '100%';
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = 'Preview';
+                    img.className = 'image-preview';
+                    
+                    const fileInfo = document.createElement('div');
+                    fileInfo.className = 'file-info';
+                    
+                    const fileName = document.createElement('p');
+                    fileName.innerHTML = `<strong>Name:</strong> ${file.name}`;
+                    
+                    const fileSize = document.createElement('p');
+                    fileSize.innerHTML = `<strong>Size:</strong> ${formatFileSize(file.size)}`;
+                    
+                    const fileType = document.createElement('p');
+                    fileType.innerHTML = `<strong>Type:</strong> ${file.type}`;
+                    
+                    const removeBtn = document.createElement('button');
+                    removeBtn.textContent = 'Remove';
+                    removeBtn.style.padding = '5px 10px';
+                    removeBtn.style.background = 'var(--danger-color)';
+                    removeBtn.style.color = 'white';
+                    removeBtn.style.border = 'none';
+                    removeBtn.style.borderRadius = '4px';
+                    removeBtn.style.cursor = 'pointer';
+                    removeBtn.style.marginTop = '10px';
+                    removeBtn.addEventListener('click', () => removeFile(index));
+                    
+                    fileInfo.appendChild(fileName);
+                    fileInfo.appendChild(fileSize);
+                    fileInfo.appendChild(fileType);
+                    fileInfo.appendChild(removeBtn);
+                    
+                    fileContainer.appendChild(img);
+                    fileContainer.appendChild(fileInfo);
+                    
+                    previewContent.appendChild(fileContainer);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        // Remove single file
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            if (selectedFiles.length > 0) {
+                updatePreview();
+            } else {
+                previewContainer.style.display = 'none';
+                convertBtn.style.display = 'none';
+            }
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+
+        // Simulate file conversion
+        function convertFiles() {
+            if (selectedFiles.length === 0) {
+                showToast('Please select files to convert.');
+                return;
+            }
+            
+            spinner.style.display = 'block';
+            progressContainer.style.display = 'block';
+            convertBtn.disabled = true;
+            
+            // Simulate progress
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 10;
+                if (progress >= 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        spinner.style.display = 'none';
+                        progressContainer.style.display = 'none';
+                        convertBtn.disabled = false;
+                        downloadExcel();
+                    }, 500);
+                }
+                progressBar.style.width = progress + '%';
+            }, 200);
+        }
+
+        // Simulate Excel download
+        function downloadExcel() {
+            const compression = compressionSlider.value;
+            const format = document.querySelector('input[name="format"]:checked').value;
+            
+            showToast(`Conversion complete! Downloading ${format.toUpperCase()} file.`);
+            
+            // In a real implementation, you would process the images here
+            // and create a downloadable Excel file
+            // This is just a simulation
+            
+            // Create a dummy download link
+            const link = document.createElement('a');
+            link.href = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,UEsDBBQAAAAIA...'; // Truncated base64 dummy data
+            link.download = `converted_images_${new Date().getTime()}.${format}`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Initialize AdSense
+        (function() {
+            // This would be handled by the AdSense script you include in the head
+            console.log('AdSense initialized');
+        })();
+    </script>
+</body>
+</html>
