@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free AI-powered image optimizer. Resize, compress, and enhance photos with precise file size control. No watermarks, no registration.">
+    <meta name="keywords" content="image optimizer, compress image, resize photo, AI image enhancer, reduce image size">
+    <meta name="author" content="ImageOptimizer Pro">
+    <meta property="og:title" content="ImageOptimizer Pro | AI-Powered Photo Enhancer">
+    <meta property="og:image" content="https://example.com/preview.jpg">
+    <title>ImageOptimizer Pro | Resize, Compress & Enhance Photos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --accent: #4895ef;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #4bb543;
+            --danger: #d9534f;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f7ff;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 28px;
+        }
+
+        /* Tool Section */
+        .tool-container {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin: 40px 0;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .upload-area {
+            border: 2px dashed var(--gray);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary);
+            background: rgba(67, 97, 238, 0.05);
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Advanced Options */
+        .advanced-options {
+            margin-top: 30px;
+            display: none;
+        }
+
+        .toggle-options {
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .option-group {
+            margin-bottom: 20px;
+        }
+
+        .option-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        /* KB/MB Control */
+        .size-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .size-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+        }
+
+        .size-unit {
+            padding: 10px;
+            background: var(--light);
+            border-radius: var(--radius);
+        }
+
+        /* Before-After Slider */
+        .comparison-slider {
+            position: relative;
+            margin: 20px 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .before-after {
+            display: flex;
+            position: relative;
+        }
+
+        .before-img, .after-img {
+            width: 50%;
+            height: auto;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary);
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .before-after {
+                flex-direction: column;
+            }
+            .before-img, .after-img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-magic"></i>
+                    ImageOptimizer Pro
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Ad Banner -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Main Tool -->
+            <div class="tool-container">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <h3>Drag & Drop Your Image</h3>
+                    <p>or click to browse files (JPEG, PNG, WebP)</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+
+                <div class="advanced-options" id="advancedOptions">
+                    <div class="option-group">
+                        <label>Target File Size</label>
+                        <div class="size-control">
+                            <input type="number" id="fileSizeValue" class="size-input" placeholder="200">
+                            <select id="fileSizeUnit" class="size-unit">
+                                <option value="KB">KB</option>
+                                <option value="MB">MB</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label>AI Enhancement</label>
+                        <div class="slider-container">
+                            <input type="range" min="0" max="100" value="50" id="enhanceSlider">
+                            <span id="enhanceValue">50% Sharpness</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-slider">
+                        <div class="before-after">
+                            <img id="beforeImg" class="before-img" src="" alt="Original">
+                            <img id="afterImg" class="after-img" src="" alt="Optimized">
+                            <div class="slider-handle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toggle-options" id="toggleOptions">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Advanced Options</span>
+                </div>
+
+                <button id="optimizeBtn" class="btn" disabled>
+                    <i class="fas fa-bolt"></i> Optimize Now
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // DOM Elements
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const advancedOptions = document.getElementById('advancedOptions');
+        const toggleOptions = document.getElementById('toggleOptions');
+        const optimizeBtn = document.getElementById('optimizeBtn');
+        const beforeImg = document.getElementById('beforeImg');
+        const afterImg = document.getElementById('afterImg');
+
+        // Toggle Advanced Options
+        toggleOptions.addEventListener('click', () => {
+            advancedOptions.style.display = advancedOptions.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Handle File Upload
+        uploadArea.addEventListener('click', () => fileInput.click());
+        uploadArea.addEventListener('dragover', (e) => e.preventDefault());
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            if (e.dataTransfer.files.length) handleImage(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) handleImage(fileInput.files[0]);
+        });
+
+        function handleImage(file) {
+            if (!file.type.match('image.*')) {
+                alert('Please select an image file (JPEG, PNG, etc.)');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                beforeImg.src = e.target.result;
+                afterImg.src = e.target.result; // Simulate processed image
+                optimizeBtn.disabled = false;
+                advancedOptions.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Simulate Optimization (replace with actual API in production)
+        optimizeBtn.addEventListener('click', () => {
+            alert('In production: This would send to an AI API for enhancement and compression');
+            // Example: Use Canvas API for client-side resizing
+            // Or fetch() to a backend like Python/Pillow or Cloudinary
+        });
+    </script>
+</body>
+</html>
